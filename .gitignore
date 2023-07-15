@@ -35,3 +35,6 @@ build/
 /.mvn/
 /mvnw.cmd
 /mvnw
+/src/test/java/com/csa21472001/calculator/CalculatorApplicationTests.java
+/src/test/java/com/csa21472001/calculator/CalculatorCollector.java
+/src/test/java/com/csa21472001/calculator/CalculatorServiceImpl.java
