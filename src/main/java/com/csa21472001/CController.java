@@ -1,7 +1,6 @@
 package com.csa21472001;
 
 import org.springframework.web.bind.annotation.*;
-
 @RestController
 @RequestMapping("/calculator")
 public class CController {

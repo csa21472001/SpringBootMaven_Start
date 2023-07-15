@@ -1,7 +1,6 @@
 package com.csa21472001;
 
 import org.springframework.stereotype.Service;
-
 @Service
 public class CService implements CalculatorService {
     public String hello() {
