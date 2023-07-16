@@ -3,9 +3,10 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/calculator")
 public class CController {
-    private final CService cService;
+    private int checForNull;
+    private final CalculatorService cService;
 
-    public CController(CService cService) {
+    public CController(CalculatorService cService) {
         this.cService = cService;
     }
 
@@ -31,11 +32,15 @@ public class CController {
 
     @GetMapping("/divide")
     public String divide(@RequestParam int num1, @RequestParam int num2) {
+        checForNull = num1;
         return cService.divide(num1, num2);
     }
 
     @ExceptionHandler(Exception.class)
-    public String handleException(Exception ex) {
+    public String handlException(Exception ex) {
+        if (checForNull == 0) {
+            throw new IllegalArgumentException("На ноль делить нельзя!");
+        }
         return "Получена ошибка: " + ex.getMessage();
     }
 }
