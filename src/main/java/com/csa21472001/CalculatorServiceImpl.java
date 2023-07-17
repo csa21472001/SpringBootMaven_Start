@@ -13,6 +13,7 @@ public class CalculatorServiceImpl implements CalculatorService {
         return num1 + " + " + num2 + " = " + result;
     }
 
+
     public String minus(int num1, int num2) {
         int result = num1 - num2;
         return num1 + " - " + num2 + " = " + result;
