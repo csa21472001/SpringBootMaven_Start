@@ -9,7 +9,6 @@ public class CalculatorController {
     public CalculatorController(CalculatorService cService) {
         this.cService = cService;
     }
-
     @GetMapping
     public String welcome() {
         return cService.hello();
