@@ -1,5 +1,7 @@
 package com.csa21472001;
 import org.springframework.stereotype.Service;
+
+
 @Service
 public class CalculatorServiceImpl implements CalculatorService {
     public String hello() {
@@ -22,9 +24,6 @@ public class CalculatorServiceImpl implements CalculatorService {
     }
 
     public String divide(int num1, int num2) {
-        if (num2 == 0) {
-            throw new IllegalArgumentException("На ноль делить нельзя!");
-        }
         float result = (float) num1 / num2;
         return num1 + " / " + num2 + " = " + result;
     }

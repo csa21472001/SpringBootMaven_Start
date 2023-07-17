@@ -2,11 +2,11 @@ package com.csa21472001;
 import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/calculator")
-public class CController {
+public class CalculatorController {
     private int checForNull;
     private final CalculatorService cService;
 
-    public CController(CalculatorService cService) {
+    public CalculatorController(CalculatorService cService) {
         this.cService = cService;
     }
 
@@ -32,7 +32,7 @@ public class CController {
 
     @GetMapping("/divide")
     public String divide(@RequestParam int num1, @RequestParam int num2) {
-        checForNull = num1;
+        checForNull = num2;
         return cService.divide(num1, num2);
     }
 
